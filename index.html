@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawlicki Loïc CV</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 font-sans leading-relaxed tracking-wide">
+    <div class="container mx-auto my-10 max-w-4xl">
+
+        <!-- Main Layout -->
+        <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+            
+
+            <!-- Left Column -->
+            <div class="md:w-2/6 bg-gray-800 text-white p-6">
+                
+
+                <!-- Profile Picture -->
+                <div class="flex justify-center mb-2">
+                    <img src="Images/profilepic.png" alt="Profile picture" class="w-25 h-25 rounded-full border-4 border-white">
+                </div>
+
+                <!-- Name -->
+                <div align="center" class="cursor-pointer hover:bg-gray-700 transition-colors duration-300 p-1 rounded">
+                    <h2 class="text-3xl font-semibold">PAWLICKI Loïc</p>
+                </div>
+
+                <!-- <hr> -->
+
+                <!-- Contact -->
+                <div class="hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <h2 class="text-xl font-semibold mb-2">Contact</h2>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:loic.pawlicki@gmail.com" class="text-white hover:text-gray-300">loic.pawlicki@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <span id="phone-number" class="cursor-pointer text-white hover:text-gray-300" onclick="copyToClipboard('+33631895769')">+33 6 31 89 57 69</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://www.google.com/maps?q=La Roche Sur Foron,+France" target="_blank" class="text-white hover:text-gray-300">La Roche-Sur-Foron, France</a>
+                    </p>
+                </div>
+                <script>
+                    function copyToClipboard(text) {
+                        const tempInput = document.createElement('textarea');
+                        tempInput.value = text;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        alert('Numéro de téléphone copié dans le presse-papiers!');
+                    }
+                </script>
+
+                <!-- About me -->
+                <div class="mb-2 hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <h2 class="text-xl font-semibold mb-2">Profil</h2>
+                    <ul class="list-disc list-inside overflow-hidden transition-all duration-500"
+                    x-show="open" x-transition:enter="transition ease-out duration-1000"
+                    x-transition:enter-start="opacity-0 max-h-0"
+                    x-transition:enter-end="opacity-100 max-h-full"
+                    x-transition:leave="transition ease-in duration-300"
+                    x-transition:leave-start="opacity-100 max-h-full"
+                    x-transition:leave-end="opacity-0 max-h-0">
+                        <p align="justify" style="font-size: 15px;">
+                            Jeune ingénieur en électronique et systèmes embarqués, je suis à la recherche d’opportunités pour mettre 
+                            mes compétences au service de projets innovants et développer mon expertise technique et professionnelle.                  
+                        </p>  
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="mb-2 hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <div class="flex space-x-4 justify-center">
+                        <a href="https://www.linkedin.com/in/lo%C3%AFc-pawlicki-a7b305233/" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/Lpwlk" target="_blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <!-- Langues -->
+                <div class="hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <h2 class="text-xl font-semibold">Langues</h2>
+                  
+                    <!-- Anglais -->
+                    <div class="mb-2">
+                        <div class="flex justify-between">
+                            <span>Anglais</span>
+                            <span style="line-height:26px; font-size:13px" class="text-gray-100">Certifié (C1+)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-blue-300 h-2 rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                  
+                    <!-- Espagnol -->
+                    <div class="mb-2">
+                        <div class="flex justify-between">
+                            <span>Espagnol</span>
+                            <span style="line-height:26px; font-size:13px" class="text-gray-100">Intermédiaire (B1)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-blue-300 h-2 rounded-full" style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Coréen -->
+                    <div class="">
+                        <div class="flex justify-between">
+                            <span>Coréen</span>
+                            <span style="line-height:26px; font-size:13px" class="text-gray-100">Débutant (A1)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
+                            <div class="bg-blue-300 h-2 rounded-full" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <h2 class="text-xl font-semibold">Aptitudes</h2>
+                    <ul class="p-2 list-disc">
+                        <li>
+                            Curiosité technique
+                        </li>
+                        <li>
+                            Travail en équipe
+                        </li>
+                        <li>
+                            Dynamisme
+                        </li>
+                        <li>
+                            Gestion du temps
+                        </li>
+                        <li>
+                            Mobilité (Permis B)
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <!-- Hobbies -->
+                <div class="mb-2 hover:bg-gray-700 transition-colors duration-300 p-2 rounded">
+                    <h2 class="text-xl font-semibold">Centres d'intérêt</h2>
+                    <ul class="p-2 list-disc">
+                        <li>
+                            Escalade, montagne
+                        </li>
+                        <li>
+                            Modélisme (drones FPV)
+                        </li>
+                        <li>
+                            Informatique
+                        </li>
+                        <li>
+                            Guitare
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- Right Column -->
+            <div class="md:w-4/6 p-5">
+                
+                <!-- Education Section -->
+                <div class="mt-2 mb-2" x-data="{ open: true }">
+                    <h2 class="text-2xl font-semibold mb-1 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors duration-300 p-1 rounded"
+                        @click="open = !open">
+                        Formation
+                    </h2>
+                    <ul class="list-disc list-inside overflow-hidden transition-all duration-500"
+                        x-show="open" x-transition:enter="transition ease-out duration-1000"
+                        x-transition:enter-start="opacity-0 max-h-0"
+                        x-transition:enter-end="opacity-100 max-h-full"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 max-h-full"
+                        x-transition:leave-end="opacity-0 max-h-0">
+
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded">
+                            <strong>Diplôme d'ingénieur en systèmes embarqués</strong> – UTBM, Belfort
+                            <p style="font-size: 14px">Spécialité en Électronique & Systèmes embarqués (département Énergie)</p>
+                            <span style="font-size:14px" class="text-gray-500">Septembre 2021 - Juillet 2024</span>
+                        </li>
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded">
+                            <strong>DUT Mesures Physiques</strong> – Université Grenoble Alpes, Grenoble
+                            <p style="font-size: 14px">Techniques d'instrumentation et formation scientifique généraliste</p>
+                            <span style="font-size:14px" class="text-gray-500">Janvier 2019 - Juillet 2021</span>
+                        </li>
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded">
+                            <strong>Classe préparatoire (CPGE)</strong> - Lycée Berthollet, Annecy
+                            <p style="font-size:14px">Filière PCSI spécialité sciences de l'ingénieur</p>
+                            <span style="font-size:14px" class="text-gray-500">Septembre 2018 - Novembre 2019</span>
+                        </li>
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded">
+                            <strong>Lycée général</strong> - ENILV, La-Roche-Sur-Foron
+                            <p style="font-size:14px">Baccalauréat général scientifique obtenu avec mention Bien</p>
+                            <span style="font-size:14px" class="text-gray-500">Septembre 2015 - Juin 2018</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <!-- Experience Section -->
+                <div class="mt-2 mb-2" x-data="{ open: true }">
+                    <h2 class="text-2xl font-semibold mb-1 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors duration-300 p-1 rounded"
+                        @click="open = !open">
+                        Expérience professionnelle
+                    </h2>
+                    <ul class="list-disc list-inside overflow-hidden transition-all duration-1000"
+                        x-show="open" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 max-h-0"
+                        x-transition:enter-end="opacity-100 max-h-full"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 max-h-full"
+                        x-transition:leave-end="opacity-0 max-h-0">
+
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded p-1">
+                            <strong>Stage ingénieur</strong> – <a href="https://www.buschvacuum.com/fr/fr/" target="_blank" class="text-gray-800 font-medium hover:text-gray-500">Busch Vacuum Solutions</a>, Chevenez (Suisse)
+                            <span style="font-size:14px" class="text-gray-500"">Février - Juillet 2024 (6 mois)</span>
+                            <ul class="list-disc ml-6">
+                                <li style="font-size: 14px">Design d'un PCB multicouches d'évaluation de capteurs</li>
+                                <li style="font-size: 14px">Configuration du firmware du microcontrôleur STM32</li>
+                                <li style="font-size: 14px">Développement du logiciel d'acquisition sous freeRTOS et FatFS (C)</li>
+                                <li style="font-size: 14px">Contrôle des cartes réalisées & tests logiciel</li>
+                            </ul>
+                        </li>
+
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded p-1">
+                            <strong>Stage assistant ingénieur</strong> – <a href="https://www.nexans.fr/fr/" target="_blank" class="text-gray-800 font-medium hover:text-gray-500">Nexans</a>, Lyon (France)
+                            <br><span style="font-size:14px" class="text-gray-500"">Février - Juillet 2023 (6 mois)</span>
+                            <ul class="list-disc ml-6">
+                                <li style="font-size: 14px">Programmation d'un réseau WiFi de capteurs de courant (C)</li>
+                                <li style="font-size: 14px">Contribution au développement de l'algorithme de mesure</li>
+                                <li style="font-size: 14px">Développement d'une IHM temporaire pour un PoC (Python 3)</li>
+                            </ul>
+                        </li>
+
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded p-1">
+                            <strong>Stage assistant ingénieur</strong> – <a href="https://www.esrf.fr/" target="_blank" class="text-gray-800 font-medium hover:text-gray-500">ESRF</a>, Grenoble (France)
+                            <br><span style="font-size:14px" class="text-gray-500">Mai - Juillet 2021 (2 mois)</span>
+                            <ul class="list-disc ml-6">
+                                <li style="font-size: 14px">Réalisation de mesures au microscope sur lentilles à rayons-X</li>
+                                <li style="font-size: 14px">Développement d'outils de traitement des mesures (Python 3)</li>
+                            </ul>
+                        </li>
+
+                        <li class="hover:bg-gray-100 transition-colors duration-300 rounded p-1">
+                            <strong>Cours particuliers</strong> – La-Roche-Sur Foron, Annecy, Belfort (France)
+                            <br><span style="font-size:14px" class="text-gray-500"">Mai 2017 - Juin 2022</span>
+                            <ul class="list-disc ml-6">
+                                <li style="font-size: 14px">Cours particuliers en Mathématiques et Physique à des collégiens et lycéens</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <hr>
+                
+                <!-- Competences Section -->
+                <div class="mt-2 mb-2" x-data="{ open: true }">
+                    <h2 class="text-2xl font-semibold mb-1 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors duration-300 p-1 rounded"
+                        @click="open = !open">
+                        Compétences techniques
+                    </h2>
+                    <ul class="list-disc list-inside overflow-hidden transition-all duration-1000"
+                    x-show="open" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 max-h-0"
+                    x-transition:enter-end="opacity-100 max-h-full"
+                    x-transition:leave="transition ease-in duration-300"
+                    x-transition:leave-start="opacity-100 max-h-full"
+                    x-transition:leave-end="opacity-0 max-h-0">
+
+                        <div class="grid grid-cols-1 md:grid-cols-7">
+                        
+                            <!-- Colonne 1: Logiciels et Protocoles -->
+                            <div class="hover:bg-gray-100 transition-colors duration-300 rounded md:col-span-3">
+                                <h3 class="text-xl font-semibold mb-1">Outils</h3>
+                                <ul class="list-disc list-inside">
+                                    <li>C/C++/asm</li>
+                                    <li>Python 3</li>
+                                    <li>MATLAB/LabView</li>
+                                    <li>I2C/SPI/CAN</li>
+                                    <li>WiFi/BLE/ZigBee</li>
+                                    <li>VSCode/VStudio</li>
+                                    <li>STM32CubeIDE</li>
+                                    <li>Git/Github/Gitlab</li>
+                                </ul>
+                            </div>
+                        
+                            <!-- Colonne 2: Disciplines -->
+                            <div class="hover:bg-gray-100 transition-colors duration-300 rounded md:col-span-4">
+                                <h3 class="text-xl font-semibold mb-1">Savoir-faire</h3>
+                                <ul class="list-disc list-inside">
+                                    <li>Programmation C embarqué</li>
+                                    <li>MCU (STM32/TI) & DSP (TI)</li>
+                                    <li>Debug & tests logiciel</li>
+                                    <li>Développement RTOS (FreeRTOS)</li>
+                                    <li>Traitement du signal</li>
+                                    <li>Design PCB multicouches</li>
+                                    <li>Analyses CEM</li>
+                                    <li>Prototypage de systèmes</li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- Références pro -->
+                    <div class="mt-2 mb-2" x-data="{ open: true }">
+                        <h2 class="text-xl font-semibold mb-1 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors duration-300 p-1 rounded"
+                            @click="open = !open">
+                            Références
+                        </h2>
+                        <div style="font-size:12px">
+                                <strong><a href="mailto:samuel.griot@nexans.com" class="bold hover:text-gray-700">samuel.griot@nexans.com</a></strong> - Head of Electrical Engineering Department, Nexans
+                                <br>
+                                <strong><a href="mailto:vincent.gigon@busch.ch" class="hover:text-gray-700">vincent.gigon@busch.ch</a></strong> - Global Electrical Engineering Leader, Busch Vacuum Solutions
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
